@@ -1,0 +1,1032 @@
+
+/* https://www.youtube.com/watch?v=lTMbkj0hWu4 */
+
+
+:root{    /* تعريف كل المتغيرات  */
+
+    --primarycolor: #fac054;
+    --secondarycolor: white;
+    --lightcolor: #FFFBE9;   /*  الوان الموقع  */
+    --bgcolor-1: #171a1c;
+    --bgcolor-2: #22282a;
+    --padding: 8%;  /* ده علشان نتحكم فى البدينج على حسب حجم الشاشة  */
+
+
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+  
+    box-sizing: border-box;   /* حتى يتم حسب طول و عرب البوردر  */
+    
+}
+
+html{
+
+    font-family: system-ui;  /* فوت للموقع كولو  */
+    font-size: 16px;
+    color: var(--lightcolor);
+}
+
+
+.home{
+
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgcolor-1);
+    display: flex;  /* علشان يبقو جمب بعض  */                /* الاتنين دول علشان الديف كونتنت */
+    flex-direction: column;  /* علشان تظهر العناصر فوق بعضها */
+}
+
+
+span{
+
+    color: var(--primarycolor);
+
+}
+
+
+h2{
+
+    font-size: 1.5rem;
+    letter-spacing: 0.12rem;  /* سبيس بين الكلمات */
+    cursor: pointer;  /* علشان شكل الماوس لما يجى على الكلمة  */
+
+}
+
+nav{
+
+   
+    padding-top: 2.8rem;    /* علشان نظبط النافى من فوق */
+    padding-left: var(--padding);   /* ده بادينج الاساس 8 اللى فوق */
+    padding-right: var(--padding);
+    display: flex;   /* علشان الناف بار تبقا جمب بعض */
+    justify-content: space-between;    /* علشان انظمها  */
+    align-items: center;   /* اخليها فى النص  */
+    
+    
+}
+
+nav ul li {
+
+    list-style-type: none;   /* علشان تشيل الدواير اللى جمب اليو ال  */
+    display: inline-block;     /* علشان يبقا كولو على سطر واحد */
+    margin: 0.8rem 1.5rem ;  /* علشان نحدد فراغات بين العناصر  */
+}
+
+nav ul li a{
+
+    color: var(--lightcolor);
+    text-decoration: none;    /* علشان نشيل السطر اللى على الكلام  */
+    text-transform: capitalize;   /* ده علشان الاحرف الاول من كل كلمة يكون كابيتال */
+    transition: 0.4s;   /* ده انيميشن علشان الهوفر يتحرك ببطء */
+}
+
+nav ul li a:hover{
+
+    color: var(--primarycolor);   /* ده هوفر ببنافى  */
+}
+
+.btn{
+    background-color: var(--primarycolor);
+    color: var(--lightcolor);
+    text-decoration: none;   /* علشان نشيل السطر اللى على الكلام  */
+    font-weight: bold;    /* علشان جحم يتغير بتاع الكلمة  */
+    padding: 0.81rem 1.87rem;   /* علشان نديها مساحة للبوتون */
+    border-radius: 30px;   /* علشان البوتون يبقا بى انحناء ميبقاش مربع  */
+    border: 2px solid  transparent ;   /* علشان احنا عملنا بوردر اتنين بيكسل لما اجى على الزر ميحركش النافى كلها */
+    transition: 0.4s;   /* ده انيميشن علشان الهوفر يتحرك ببطء */
+}
+
+
+.btn:hover{
+    background-color: transparent;  /* علشان نحول الخلفية الى خلفية شفافة  */
+    border: 2px solid  var(--primarycolor);  /* ده بوردر للزر علشان يعمل هوفر  */
+}
+
+
+.content{
+   
+    flex-grow: 1;   /* علشان الخلفية تظهر معانا 1 اظهار 0 اخفاء */
+    padding: 0 var(--padding);
+    display: flex;  
+    align-items: center;  /* علشان الكلام يبقا منظم و فى الوسط */
+    justify-content: space-between; /* علشان اظبط موقع الصورة  */
+}
+
+.containre-texts{
+
+    position: relative;  /* علشان نظبط مكانها */
+    bottom: 70px;
+}
+
+h1{
+
+    font-size: 4.65rem;
+    margin: 1.7rem 0;
+    
+}
+
+h3{
+
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;  /* فراغ تحت العنصر  */
+}
+
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;  /* فرق مبين الكليمات */
+    color: var(--secondarycolor);
+
+}
+
+
+.social{
+
+    margin-top: 3.5rem;
+}
+
+
+.social a {
+    text-decoration: none;
+}
+
+ .social img {
+    margin-right: 2rem;
+    width: 2.5rem;
+    transition: 0.4s;
+}
+
+.social img:hover{
+
+    transform: scale(1.2);  /* هوفر لتكبير و تصغير حجم العناصر  */
+}
+
+.home .contr-img{
+    width: 45%;
+    height: 90%;
+    position: relative;   /* علشان ده الاب و تعرف تتحكم فى الصور الى جية  */
+    align-self: flex-end ;   /* هام علشان الصورة تبقا تحت الصفحة خالص  */
+}
+
+
+.home .contr-img  img{
+
+    position: absolute;  /* ده علشان نعرف نتحكم فى الصورة موقهعا  */
+    bottom: 0;      /* علشان الصورة تاخد من تحت صفر يعنى مفيش اى مساحة  */
+    width: 100%;   /* بدى الصور عرضها الطبيعى  */
+    left: 20%;    /* بتخد من الشمال 50 فلمية علشان التيكيست  */
+    /* transform: translateX(-50%); */   /* علشان انقص من نحية الاكس 50 فلمية  */
+    transition: 1.0s; 
+
+    
+
+}
+
+.home .contr-img  img:hover {
+    
+    transform: scale(.8);  /* هوفر لتكبير و تصغير حجم العناصر  */
+
+
+}
+
+
+
+
+
+
+/* نهاية السيكشن */
+
+
+
+
+
+
+
+
+
+
+.about{         /* السيكشن التتانى  */
+
+    background-color: var(--bgcolor-2);   /* خلفيى ليه  */
+    padding: 2rem var(--padding);    /* بادينج علشان الموقع يبقا كولو واحد */
+    display: flex;
+    align-items: center;
+    justify-content: space-around ;
+}
+
+.about .contr-img{     /* عرض لديف الصورة  */
+    width: 35%;
+}
+
+.about .contr-img  img{   /* عرض للصورة نفسها  */
+
+    width: 90%;
+    transition: 1.0s;   /* علشان الهوفر يبقا بطئ */
+}
+
+
+.about .containre-texts{
+
+    width: 50%;
+    bottom: 0;
+    right: 10px;
+}
+
+.about .contr-img  img:hover {
+    
+    transform: scale(.8);  /* هوفر لتكبير و تصغير حجم العناصر  */
+
+
+}
+
+P{
+
+    color: var(--lightcolor);  /* علشان تاخد لون  */
+    letter-spacing: 1px;   /* علشان يبقا فى فاصل مبين الكليمات */
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+
+h5{
+
+    font-size: 1.37rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+
+
+
+/* نهاية السيكشن */
+
+
+
+
+
+
+
+
+
+
+.Services{      /* سيكشن جديد السيرفز */
+    background-color: var(--bgcolor-1);
+    padding: 2rem var(--padding);
+
+}
+
+.centerr{
+
+    text-align: center;     /* علشان العنوان يبقا فى النص  */
+    
+}
+
+
+
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    
+
+    
+}
+.card  {
+
+    width: 250px;
+    
+    background-color: var(--bgcolor-2);
+    border-radius: 20px;   /* علشان الديف يجى بانحناء مبيقاش مربع */
+    padding: 1.3rem 2rem;
+    text-align: center;
+}
+
+
+.card i{
+
+    font-size: 3.12rem;
+    text-align: center;
+    color: var(--primarycolor);
+    margin: 2rem;
+}
+
+
+
+
+/* https://www.youtube.com/watch?v=32mikawUXrs */
+
+
+
+
+.skills .contr-img{     /* عرض لديف الصورة  */
+    width: 35%;
+}
+
+.skills .contr-img  img{   /* عرض للصورة نفسها  */
+
+    width: 90%;
+    transition: 1.0s;   /* علشان الهوفر يبقا بطئ */
+}
+
+
+
+
+
+
+/* نهاية السيكشن */
+
+
+
+
+
+
+
+.skills{         /* السيكشن الثالث  */
+
+    background-color: var(--bgcolor-2);   /* خلفيى ليه  */
+    padding: 2rem var(--padding);    /* بادينج علشان الموقع يبقا كولو واحد */
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+
+.skills .containre-skills {
+    width: 40%;
+}
+
+
+.contr-skills{
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill{
+
+    width: 100px;
+    height: 100px;
+    background-color: var(--lightcolor);
+    border-radius: 50%;
+    margin: 0 2rem 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.skill img{
+    width: 70%;
+}
+
+
+.skills .contr-img  img:hover {
+    
+    transform: scale(.8);  /* هوفر لتكبير و تصغير حجم العناصر  */
+
+
+}
+
+
+
+
+
+
+
+
+/* نهاية السيكشن */
+
+
+
+
+
+
+
+
+footer{    /* الفوتر  */
+    padding: var(--padding);         /* بادينج الصفحة */
+    background-color: var(--bgcolor-1);        /* لون خلفية معاكس */
+}
+
+
+footer .cont-footer{
+
+
+    display: flex;      /* 4 عناصر علشان الحاجه تبقا منظمة فى نفص الصفحة  */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+footer .cont-footer p{
+
+    color: var(--lightcolor);         /* تنظيم البراغراف  */
+    text-align: center;
+    width: 500px;
+    margin-top: 1rem;
+}
+
+footer .cont-footer .end{        
+
+    color: var(--primarycolor);    /* تنظيم البراغراف  */
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+#menu{
+    
+    position:relative ;
+    display: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+#menu span {
+
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: var(--lightcolor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+
+}
+
+/* الجزء ده علشان يتغير شكل الايكون بتات الفون  */
+
+#menu.is-active span:nth-child(1){
+    transform: translate(0px, -2px) rotate(45deg);
+}
+#menu.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px) ;
+}
+#menu.is-active span:nth-child(3){
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+#menu.is-active span {
+    background-color: var(--primarycolor);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ميديا كويرى  */
+
+
+
+
+
+
+
+@media screen and (max-width:575px) {
+
+   
+    
+    
+    :root{
+        --padding: 1.5rem;
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+    .home .contr-img{
+        display: none;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        
+        padding-top: 0;
+        background-color: var(--bgcolor-1);
+        border-bottom: 1px solid var(--bgcolor-2) ;
+        z-index: 100;
+    }
+
+
+    nav > a {
+        display: none;
+
+   }   
+   nav  ul{
+
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: var(--bgcolor-2);
+}
+
+
+nav  ul.is-active{
+    display: block;
+}
+
+
+nav ul li{
+
+    display: block;
+    text-align: center;
+    margin: 70px;
+}
+
+.containre-texts{
+    bottom: 0em;
+}
+.social{
+
+    margin-top: 70px;
+}
+h3{
+    margin-bottom: 70px;
+}
+
+
+#menu {
+    display:block ;
+}
+
+
+
+    .about .contr-img img{
+        display: none;
+    }
+
+
+    .about .containre-texts{
+        width: 990px ;
+
+    }
+
+    .box{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        
+        
+    }
+
+    .skills .contr-img img{
+        display: none;
+    }
+
+
+    .skills .containre-skills{
+        width:1150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .contr-skills{
+        margin-bottom: 2rem;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .skill{
+        width: 80px;
+    height: 80px;
+    }
+
+    footer .cont-footer p{
+            
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:576px) and (max-width: 767px) {
+
+   
+    
+    
+    :root{
+        --padding: 1.5rem;
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+    .home .contr-img{
+        display: none;
+    }
+    
+    .content{
+        padding-top: 82px;
+    }
+    
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        
+        padding-top: 0;
+        background-color: var(--bgcolor-1);
+        border-bottom: 1px solid var(--bgcolor-2) ;
+        z-index: 100;
+    }
+
+
+    nav > a {
+        display: none;
+
+   }   
+   nav  ul{
+
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: var(--bgcolor-2);
+}
+
+
+nav  ul.is-active{
+    display: block;
+}
+
+
+nav ul li{
+
+    display: block;
+    text-align: center;
+    margin: 70px;
+}
+
+.containre-texts{
+    bottom: 0em;
+}
+.social{
+
+    margin-top: 30px;
+}
+h3{
+    margin-bottom: 30px;
+}
+
+
+#menu {
+    display:block ;
+}
+
+
+
+    .about .contr-img img{
+        display: none;
+    }
+
+
+    .about .containre-texts{
+        width: 990px ;
+
+    }
+
+    .box{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        
+        
+    }
+
+    .skills .contr-img img{
+        display: none;
+    }
+
+
+    .skills .containre-skills{
+        width:1150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .contr-skills{
+        margin-bottom: 2rem;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .skill{
+        width: 80px;
+    height: 80px;
+    }
+
+    footer .cont-footer p{
+            
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:768px) and (max-width: 991px) {
+
+   
+    
+    
+
+    :root{
+        --padding: 1.5rem;
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+    .home .contr-img{
+        display: none;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        
+        padding-top: 0;
+        background-color: var(--bgcolor-1);
+        border-bottom: 1px solid var(--bgcolor-2) ;
+        z-index: 100;
+    }
+
+
+    nav > a {
+        display: none;
+
+   }   
+   nav  ul{
+
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: var(--bgcolor-2);
+}
+
+
+nav  ul.is-active{
+    display: block;
+}
+
+
+nav ul li{
+
+    display: block;
+    text-align: center;
+    margin: 70px;
+}
+
+.containre-texts{
+    bottom: 0em;
+}
+.social{
+
+    margin-top: 70px;
+}
+h3{
+    margin-bottom: 70px;
+}
+
+
+#menu {
+    display:block ;
+}
+
+
+
+    .about .contr-img img{
+        display: none;
+    }
+
+
+    .about .containre-texts{
+        width: 990px ;
+
+    }
+
+    .box{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        
+        
+    }
+
+    .skills .contr-img img{
+        display: none;
+    }
+
+
+    .skills .containre-skills{
+        width:1150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .contr-skills{
+        margin-bottom: 2rem;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .skill{
+        width: 80px;
+    height: 80px;
+    }
+
+    footer .cont-footer p{
+            
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:992px) and (max-width: 1279px) {
+
+   
+    
+    
+
+    :root{
+        --padding: 1.5rem;
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+    .home .contr-img img{
+        height: auto;
+        width: 100%;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        
+        padding-top: 0;
+        background-color: var(--bgcolor-1);
+        border-bottom: 1px solid var(--bgcolor-2) ;
+        z-index: 100;
+    }
+
+
+    nav > a {
+        display: none;
+
+   }   
+   nav  ul{
+
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: var(--bgcolor-2);
+}
+
+
+nav  ul.is-active{
+    display: block;
+}
+
+
+nav ul li{
+
+    display: block;
+    text-align: center;
+    margin: 70px;
+}
+
+.containre-texts{
+    bottom: 0em;
+}
+.social{
+
+    margin-top: 70px;
+}
+h3{
+    margin-bottom: 70px;
+}
+
+
+#menu {
+    display:block ;
+}
+
+
+
+    .about .contr-img img{
+        width: 60%;
+    }
+
+
+    .about .containre-texts{
+        width: 990px ;
+
+    }
+
+    .box{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        
+        
+    }
+
+    .skills .contr-img img{
+        width: 60%;
+    }
+
+
+    .skills .containre-skills{
+        width:1150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .contr-skills{
+        margin-bottom: 2rem;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .skill{
+        width: 80px;
+    height: 80px;
+    }
+
+    footer .cont-footer p{
+            
+        width: 100%;
+    }
+}
+
+
+
+
+/* نهاية الفوتر */
